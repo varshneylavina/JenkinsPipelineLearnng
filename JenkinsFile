@@ -21,17 +21,17 @@ pipeline{
         }
                 stage('Compile Stage'){
             steps{
-                dir("JenkinsPipelineLearnng"){
-                    bat 'mvn compile'
+                dir("JenkinsPipelineLearning/src/main/java"){
+                    bat 'javac jenkins/pipeline/App.java'
                 }
             }
         }
-                stage('install Stage'){
-            steps{
-                dir("JenkinsPipelineLearnng"){
-                    bat 'mvn install'
+                 stage('Run App') {
+            steps {
+                dir('JenkinsPipelineLearning/src/main/java') {
+                    bat 'java jenkins.pipeline.App'            // Run the compiled App class
                 }
             }
-        }
+          }  
     }
 }

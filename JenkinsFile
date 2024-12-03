@@ -21,15 +21,15 @@ pipeline{
         }
                 stage('Compile Stage'){
             steps{
-                dir("JenkinsPipelineLearning/src/main/java"){
-                    bat 'javac App.java'
+                dir("src/main/java"){
+                    bat 'javac jenkins/pipeline/App.java'
                 }
             }
         }
                  stage('Run App') {
             steps {
-                dir('JenkinsPipelineLearning/src/main/java') {
-                    bat 'java App'            // Run the compiled App class
+                dir('src/main/java') {
+                    bat 'java jenkins.pipeline.App'            // Run the compiled App class
                 }
             }
           }  

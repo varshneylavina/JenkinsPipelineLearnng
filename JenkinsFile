@@ -10,6 +10,7 @@ pipeline{
         bat 'git clone https://github.com/varshneylavina/JenkinsPipelineLearnng'
         }
         }
+        }
         stage('Clean Stage'){
             steps{
                 dir("JenkinsPipelineLearnng"){

@@ -7,7 +7,7 @@ pipeline{
         stage('Clone git Repo'){
         steps{
             dir('JenkinsPipelineLearnng'){
-              deletedir()
+              deleteDir()
         bat 'git clone https://github.com/varshneylavina/JenkinsPipelineLearnng .'
         }
         }
